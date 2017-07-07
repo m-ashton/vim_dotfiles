@@ -4,3 +4,6 @@
 [submodule "bundle/smyck-vim"]
 	path = bundle/smyck-vim
 	url = https://github.com/brendonrapp/smyck-vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
