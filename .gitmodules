@@ -22,3 +22,12 @@
 [submodule "bundle/vim-monokai-pro"]
 	path = bundle/vim-monokai-pro
 	url = https://github.com/phanviet/vim-monokai-pro.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/fzf.vim"]
+	path = bundle/fzf.vim
+	url = git@github.com:junegunn/fzf.vim.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = git@github.com:jlanzarotta/bufexplorer.git
