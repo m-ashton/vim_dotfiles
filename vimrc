@@ -1,7 +1,9 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
-colorscheme smyck
+set termguicolors
+colorscheme monokai_pro
+
 "
 " A lot of this is copied from https://github.com/braintreeps/vim_dotfiles
 set nu textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
