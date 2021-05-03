@@ -16,3 +16,9 @@
 [submodule "bundle/vim-endwise"]
 	path = bundle/vim-endwise
 	url = https://github.com/tpope/vim-endwise
+[submodule "bundle/vim-polyglot"]
+	path = bundle/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "bundle/vim-monokai-pro"]
+	path = bundle/vim-monokai-pro
+	url = https://github.com/phanviet/vim-monokai-pro.git
