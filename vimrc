@@ -12,6 +12,29 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 
+" Vimux
+let g:VimuxUseNearestPane = 1
+
+function! TestContext()
+  wall
+  let [_, lnum, cnum, _] = getpos('.')
+  RubyBlockSpecParentContext
+  TestNearest
+  call cursor(lnum, cnum)
+endfunction
+
+command! TestContext :call TestContext()
+
+map <silent> <LocalLeader>rc :TestContext<CR>
+map <silent> <LocalLeader>rb :wa<CR>:TestFile<CR>
+map <silent> <LocalLeader>rf :wa<CR>:TestNearest<CR>
+map <silent> <LocalLeader>rl :wa<CR>:TestLast<CR>
+map <silent> <LocalLeader>rx :wa<CR>:VimuxCloseRunner<CR>
+map <silent> <LocalLeader>ri :wa<CR>:VimuxInspectRunner<CR>
+map <silent> <LocalLeader>rs :!ruby -c %<CR>
+
+let test#strategy = "vimux"
+
 " NERDTree
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
