@@ -37,3 +37,6 @@
 [submodule "bundle/vim-test"]
 	path = bundle/vim-test
 	url = git@github.com:vim-test/vim-test.git
+[submodule "bundle/vimux"]
+	path = bundle/vimux
+	url = git@github.com:preservim/vimux.git
