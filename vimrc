@@ -44,7 +44,7 @@ map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 map <silent> <LocalLeader>ho :nohl<CR>
 
 " FZF
-set rtp+=/opt/homebrew/Cellar/fzf/0.34.0/
+set rtp+=/opt/homebrew/Cellar/fzf/0.35.1/
 let $FZF_DEFAULT_COMMAND = 'find . -name "*" -type f 2>/dev/null
                             \ | grep -v -E "tmp\/|.gitmodules|.git\/|deps\/|_build\/|node_modules\/|vendor\/"
                             \ | sed "s|^\./||"'
