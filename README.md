@@ -1,6 +1,6 @@
 ### Elmward's vim dotfiles
 
-To install on a new machine, clone as `~/.vim` (`git clone <repo> ~/.vim`), `cd ~./vim`, and `git submodule update --init`. Finally symlink the vimrc: `ln -s ~/.vim/vimrc ~/.vimrc`
+To install on a new machine, clone as `~/.vim` (`git clone <repo> ~/.vim`), `cd ~/.vim`, and `git submodule update --init`. Finally symlink the vimrc: `ln -s ~/.vim/vimrc ~/.vimrc`
 
 #### Plugin Management
 

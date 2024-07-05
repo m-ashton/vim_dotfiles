@@ -43,31 +43,6 @@ map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 
 map <silent> <LocalLeader>ho :nohl<CR>
 
-" FZF
-set rtp+=/opt/homebrew/Cellar/fzf/0.35.1/
-let $FZF_DEFAULT_COMMAND = 'find . -name "*" -type f 2>/dev/null
-                            \ | grep -v -E "tmp\/|.gitmodules|.git\/|deps\/|_build\/|node_modules\/|vendor\/"
-                            \ | sed "s|^\./||"'
-let $FZF_DEFAULT_OPTS = '--reverse'
-let g:fzf_tags_command = 'ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f --langmap=Lisp:+.clj'
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit' }
-
-function! SmartFuzzy()
-  let root = split(system('git rev-parse --show-toplevel'), '\n')
-  if len(root) == 0 || v:shell_error
-    Files
-  else
-    GFiles -co --exclude-standard -- . ':!:vendor/*'
-  endif
-endfunction
-
-command! -nargs=* SmartFuzzy :call SmartFuzzy()
-map <silent> <leader>ff :SmartFuzzy<CR>
-
 " ALE
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
