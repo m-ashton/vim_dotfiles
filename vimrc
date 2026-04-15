@@ -4,6 +4,7 @@ filetype plugin indent on
 set nocompatible
 set termguicolors
 colorscheme monokai_pro
+hi Visual guibg=#264f78 ctermbg=25
 
 "
 " A lot of this is copied from https://github.com/braintreeps/vim_dotfiles
